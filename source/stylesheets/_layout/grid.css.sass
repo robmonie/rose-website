@@ -1,0 +1,32 @@
+@import "compass"
+@import "susy"
+@import "constants"
+
+
+.wrapper
+  @include container($total-columns)
+  // @include susy-grid-background
+
+
+@include at-breakpoint($breakTabletPortrait)
+
+  .wrapper
+    @include container(9)
+
+  article
+    @include span-columns(6,9)
+
+  aside
+    @include span-columns(3 omega, 9)
+
+
+@include at-breakpoint($breakTabletLandscape)
+
+  .wrapper
+    @include container(12)
+
+  article
+    @include span-columns(8,12)
+
+  aside
+    @include span-columns(4 omega, 12)

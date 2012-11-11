@@ -1,0 +1,189 @@
+@import "compass"
+@import "susy"
+@import "constants"
+
+
+//------ HEADER AND NAVIGATION
+.header-container
+  background: #b7c5aC
+  border-top: 4px solid #84978f
+  border-bottom: 1px solid #e1e6cb
+  // height: 200px
+  @include box-shadow(0 1px 5px #bbb)
+
+header
+  height: 100%
+  position: relative
+
+header h1
+  overflow: hidden
+  width: 0
+  height: 0
+
+
+header .main-image-container
+  display: none
+
+header
+  background: url(../images/rjn-small.png) no-repeat 50% 10px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+  header
+    background: url(../images/rjn.png) no-repeat 50% 10px
+    background-size: 266px 45px //Should create a proper retina image for this
+
+nav
+  text-align: center
+  position: relative
+  margin-top: 60px
+  font-size: 0.8em
+  ul
+    padding: 0
+  li
+    display: inline-block
+  a
+    border: none
+    text-decoration: none
+    padding: 0.2em 0.7em
+    &.active
+      @include border-radius(10px)
+      background: #73888f
+      color: #fff
+
+@include at-breakpoint($breakTabletPortrait)
+  .header-container
+    height: 140px
+
+  header
+    background: url(../images/rjn-med.png) no-repeat $gutter-width 65%
+    .main-image-container
+      display: block
+      height: 140px
+      width: 140px
+      border: 5px solid #fef2e2
+      border-radius: 75px
+      margin-top: 15px
+      margin-right: 4em
+      float: right
+      background-color: #D1D6BB
+      opacity: 0.8
+      overflow: hidden
+      position: relative
+      @include box-shadow(0 2px 5px #bbb)
+      .image
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        border-radius: 120px
+
+  #home
+    .main-image-container .image
+      background-image: url(../images/entrance_2.jpg)
+  #bio
+    .main-image-container .image
+      background-image: url(../images/ladies_mantle.jpg)
+  #testimonials
+    .main-image-container .image
+      background-image: url(../images/autumn_in_daylesford.jpg)
+  #friends
+    .main-image-container .image
+      background-image: url(../images/hawthorn.jpg)
+      background-size: 140% 140%
+  #booking
+    .main-image-container .image
+      background-image: url(../images/clinic_room_web_1.jpg)
+      background-size: 100% 100%
+
+  nav
+    position: absolute
+    top: 0
+    right: 0
+    width: 30em
+    margin-top: 0px
+    font-size: 1em
+    ul
+      margin-top: 0
+    a
+      font-size: 1em
+      display: inline-block
+      margin: 0
+      padding: 2px 0.5em
+      margin-bottom: 0
+      &.active
+        @include border-radius(0 0 6px 6px)
+        background: #84978F
+        color: #eee
+
+@include at-breakpoint($breakTabletLandscape)
+
+  .header-container
+    height: 160px
+  header
+    background: url(../images/rjn.png) no-repeat $gutter-width 80%
+    .main-image-container
+      margin-top: 50px
+      margin-right: 8em
+
+
+//------ CONTENT
+
+section.intro
+  font-size: 1.3em
+  line-height: 1.6em
+  color: #84978F
+  img
+    float: left
+    margin-right: 1em
+    border: 4px solid #e1e6cb
+    width: 100px
+    height: 118px
+    @include border-radius(0 2px 5px #bbb)
+
+@include at-breakpoint($breakTabletPortrait)
+  section.intro img
+    width: 200px
+    height: 237px
+
+//------ ASIDE
+
+aside
+  padding-top: 1em
+  h2
+    font-size: 1.6em
+    margin: 0.3em 0
+  h4
+    margin:  0.2em 0
+  p
+    margin: 0.5em 0
+  .map
+    border: 1px solid #eee
+    padding: 2px
+
+
+//------ FOOTER
+
+.footer-container
+  background: #84978f
+  border-top: 6px solid #b7c5aC
+  padding-top: 1em
+  .small
+    color: #fff
+
+.footer-container ul
+  padding: 0
+  margin: 0
+
+
+.footer-container li
+  float: left
+  list-style: none
+  padding: 0 5% 0 0
+
+
+.footer-container h4
+  margin: 0px
+
