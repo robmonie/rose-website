@@ -14,10 +14,15 @@ $(function() {
 
   /**Booking **/
   if($('body#booking').length) {
-    $('iframe').on('load', function() {
+    var iframe = $('iframe');
+    iframe.on('load', function() {
       $(this).css({height: 1200});
       $('.loading').hide();
     });
+
+    if($(window).width() <= 320) {
+      iframe.css({width: 280})
+    }
   }
 
 });
