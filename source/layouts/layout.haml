@@ -20,6 +20,10 @@
     = stylesheet_link_tag "site"
   %body{:id => data.page.body_id}
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    %section.away-notice
+      %strong -- Please Note --
+      %div
+        I am on maternity leave as of 10th November 2013 and will not be taking any bookings until I return in mid 2014.
     .header-container
       %header.wrapper.clearfix
         %h1.title Rosemary Janc, Naturopath
@@ -43,7 +47,7 @@
         %article
           =yield
         %aside
-          %h2 Ph: 0408 528 014
+          %h2.phone Ph: 0408 528 014
           %h4 Clinic location
           %p.address
             Level 3, 370 Queens Pde
