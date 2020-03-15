@@ -27,7 +27,7 @@ GEM
       multi_json (~> 1.0)
     favicon_maker (0.0.7)
       mini_magick (~> 3.0)
-    ffi (1.1.5)
+    ffi (1.12.2)
     fssm (0.2.9)
     haml (3.1.7)
     hike (1.2.1)
